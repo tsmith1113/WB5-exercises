@@ -6,7 +6,7 @@ const toyCategoryDropdown = document.getElementById("toyCategoryDropdown")
 const toyList = document.getElementById("toyList")
 const toyDetailRow = document.getElementById("toyDetailRow")
 const toyName = document.getElementById("toyName")
-const toyMaunfacturer = document.getElementById("toyMaunfacturer")
+const toyManufacturer = document.getElementById("toyManufacturer")
 const toyAge = document.getElementById("toyAge")
 
 
@@ -70,6 +70,7 @@ function getToyByName(toyName){
 }
 
 function onToyListChange(){
+    console.log("onToyListChange")
     
     let selectedToyName = toyList.value;
     console.log(selectedToyName);
@@ -78,7 +79,7 @@ function onToyListChange(){
    
     //set detail row element to represent this toy
     toyName.innerHTML = selectedToy.name;
-    toyMaunfacturer.innerHTML = selectedToy.manufacturer;
+    toyManufacturer.innerHTML = selectedToy.manufacturer;
     toyAge.innerHTML = selectedToy.age_range;
 
      // show deatil row
@@ -90,8 +91,8 @@ function showDeatilRow(){
 }
 
 function hideDetailRow(){
-toyDetailRow.style.display = "none";
-toyName.innerHTML = " ";
-    toyMaunfacturer.innerHTML = " ";
+    toyDetailRow.style.display = "none";
+    toyName.innerHTML = " ";
+    toyManufacturer.innerHTML = " ";
     toyAge.innerHTML = " ";
 }
